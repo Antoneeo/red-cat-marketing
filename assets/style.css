@@ -1,26 +1,27 @@
-/* General Styles */
+/* General Styles - Clean Future Theme */
 :root {
-    --primary-color: #0d47a1; /* Dark Blue */
-    --secondary-color: #f8f9fa; /* Lighter, softer Grey */
-    --accent-color: #ffab40; /* Orange/Amber for CTAs */
-    --text-color: #212529; /* Darker, more readable text */
-    --text-color-light: #495057;
+    --primary-color: #F0F2F5;   /* Light Grey */
+    --secondary-color: #FFFFFF; /* White */
+    --accent-color: #007BFF;    /* Vibrant Blue */
+    --text-color: #1C1E21;      /* Charcoal Black */
+    --text-color-light: #5A6472; /* Slate Grey */
+    --glow-color: rgba(0, 123, 255, 0.6); /* Vibrant Blue Glow */
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.7;
     margin: 0;
     padding: 0;
     color: var(--text-color-light);
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3 {
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--text-color); /* Use dark text color for all headings */
 }
 
 h1 {
@@ -58,12 +59,13 @@ section {
 
 /* Header & Navigation */
 header {
-    background-color: #fff;
-    border-bottom: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color); /* White */
+    border-bottom: 1px solid var(--primary-color); /* Light Grey Border */
     padding: 10px 40px;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow for depth */
 }
 
 nav {
@@ -75,34 +77,45 @@ nav {
 nav .logo {
     font-size: 1.5em;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 nav .nav-links a {
     margin-left: 20px;
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--text-color);
     font-weight: bold;
 }
 
 /* Buttons */
 .cta-button {
     background-color: var(--accent-color);
-    color: #fff;
+    color: #fff !important; /* Ensure text is always white for contrast */
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.cta-button:hover {
+    background-color: #0069d9; /* A slightly darker blue on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .secondary-button {
     background-color: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
     padding: 8px 18px;
     border-radius: 5px;
     text-decoration: none;
     margin-left: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.secondary-button:hover {
+    background-color: var(--accent-color);
+    color: #fff;
 }
 
 /* Specific Sections */
@@ -133,10 +146,10 @@ nav .nav-links a {
 
 .showcase-image {
     width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    border: 1px solid #ddd;
-    transition: transform 0.3s ease, z-index 0s 0.3s;
+    border-radius: 12px; /* Match persona card radius */
+    box-shadow: 0 8px 16px rgba(28, 30, 33, 0.08); /* Match persona card shadow */
+    border: none; /* Removed old border for a cleaner look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0s 0.3s;
     position: relative;
     z-index: 1;
     cursor: pointer;
@@ -144,9 +157,8 @@ nav .nav-links a {
 }
 
 .step-image-container .showcase-image:hover {
-    transform: scale(1.25);
-    z-index: 10;
-    transition: transform 0.3s ease, z-index 0s;
+    transform: scale(1.05); /* More subtle hover effect */
+    box-shadow: 0 12px 24px rgba(28, 30, 33, 0.15);
 }
 
 #solution .showcase-image {
@@ -156,34 +168,45 @@ nav .nav-links a {
 }
 
 #solution .showcase-image:hover {
-    transform: scale(1.05);
-    z-index: 10;
-    transition: transform 0.3s ease, z-index 0s;
+    transform: scale(1.03); /* More subtle hover effect */
+    box-shadow: 0 12px 24px rgba(28, 30, 33, 0.15);
 }
 
 .persona {
     flex-basis: 48%;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease-in-out;
+    padding: 30px; /* Increased padding */
+    background-color: var(--secondary-color); /* White background */
+    border-radius: 12px; /* Softer corners */
+    box-shadow: 0 8px 16px rgba(28, 30, 33, 0.08); /* Softer, modern shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
 .persona:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(28, 30, 33, 0.12);
 }
 
 /* Hero Section */
 #hero {
-  color: #fff;
-  padding: 100px 20px;
+  padding: 40px 20px; /* Padding around the gradient container */
+  background-color: var(--primary-color);
   text-align: center;
+}
+
+.hero-gradient-container {
+  color: var(--text-color);
+  padding: 60px 20px;
   position: relative;
-  background: linear-gradient(-45deg, #0d47a1, #1976d2, #42a5f5, #1e88e5);
+  background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color), #E8EAEF, var(--primary-color));
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
-  border-bottom: none;
+  border-radius: 20px; /* Rounded corners for the container */
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes gradientBG {
@@ -193,17 +216,18 @@ nav .nav-links a {
 }
 
 #hero h1 {
-  color: #fff;
+  color: var(--text-color); /* Use dark text */
   font-size: 3.5rem;
   margin-bottom: 20px;
+  line-height: 1.2; /* Base line-height */
 }
 
 #hero .subtitle {
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: 400; /* Increased font-weight for better readability */
   max-width: 800px;
   margin-bottom: 30px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-color-light); /* Use secondary dark text */
 }
 
 
@@ -266,4 +290,57 @@ nav .nav-links a {
   font-size: 45px;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem; /* Significant reduction for mobile readability */
+  }
+
+  #hero h1 {
+    font-size: 1.9rem; /* Final balanced size for impact and readability */
+    line-height: 1.3;
+  }
+
+  #hero .subtitle {
+    font-size: 1.0rem; /* Reduce subtitle size on mobile */
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  nav .nav-links {
+    display: none; /* Simple solution for now, can be improved later */
+  }
+
+  #hero {
+    padding: 20px 10px; /* Adjusted padding for mobile */
+  }
+  
+  .hero-gradient-container {
+    min-height: 80vh; /* Restore viewport height to hide content below */
+  }
+
+  .step-row, .step-row.reverse {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #why-red-cat .personas {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  #cta .secondary-button {
+    margin-left: 0; /* Reset desktop margin */
+  }
 }
