@@ -80,11 +80,33 @@ nav .logo {
     color: var(--text-color);
 }
 
+nav .nav-links {
+    display: flex;
+    align-items: center;
+}
+
 nav .nav-links a {
     margin-left: 20px;
     text-decoration: none;
     color: var(--text-color);
     font-weight: bold;
+}
+
+.lang-switcher {
+    margin-left: 20px;
+    color: var(--text-color-light);
+    font-weight: bold;
+}
+
+.lang-switcher span {
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.lang-switcher span:hover {
+    background-color: var(--primary-color);
 }
 
 /* Buttons */

@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Cat Analyzer | AI-Powered CRA & RED Compliance</title>
+    <title>RED CAT | RED Compliance Assistant Tool</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="alternate" hreflang="en" href="#" />
+    <link rel="alternate" hreflang="it" href="#" />
 </head>
 <body>
   <header>
     <nav>
         <div class="logo">
             <!-- <img src="assets/images/logo.png" alt="Red Cat Logo"> -->
-            Red Cat Analyzer
+            RED CAT
         </div>
         <div class="nav-links">
-            <a href="#how-it-works">How It Works</a>
-            <a href="#why-red-cat">Why Red Cat?</a>
-            <a href="#cta" class="cta-button">Request a Demo</a>
+            <a href="#how-it-works" data-key="nav_how_it_works">How It Works</a>
+            <a href="#why-red-cat" data-key="nav_why_red_cat">Why Red Cat?</a>
+            <div class="lang-switcher">
+                <span id="lang-en">EN</span> / <span id="lang-it">IT</span>
+            </div>
+            <a href="#cta" class="cta-button" data-key="nav_demo_button">Request a Demo</a>
         </div>
     </nav>
   </header>
@@ -27,23 +32,23 @@
     <section id="hero">
       <div class="hero-gradient-container">
         <div class="hero-content">
-          <h1>Stop Drowning in Compliance Paperwork.</h1>
-          <p class="subtitle">AI-Powered analysis for CRA & RED in minutes, not months. Your expert co-pilot for navigating complex cybersecurity regulations.</p>
-          <a href="#cta" class="cta-button">Request a Demo</a>
+          <h1 data-key="hero_title">Stop Drowning in Compliance Paperwork.</h1>
+          <p class="subtitle" data-key="hero_subtitle">AI-Powered analysis for CRA & RED in minutes, not months. Your expert co-pilot for navigating complex cybersecurity regulations.</p>
+          <a href="#cta" class="cta-button" data-key="nav_demo_button">Request a Demo</a>
         </div>
       </div>
     </section>
     <section id="solution" class="reveal">
-      <h2>AI-Powered Compliance in Minutes, Not Months.</h2>
-      <p>Red Cat Analyzer is a specialized tool that uses AI to read your technical documents, map them to compliance requirements, and generate the evidence you need. It's your expert co-pilot for CRA & RED.</p>
+      <h2 data-key="solution_title">AI-Powered Compliance in Minutes, Not Months.</h2>
+      <p data-key="solution_p">Red Cat Analyzer is a specialized tool that uses AI to read your technical documents, map them to compliance requirements, and generate the evidence you need. It's your expert co-pilot for CRA & RED.</p>
       <img src="assets/images/ProjectScreen.png" alt="Dashboard of Red Cat Analyzer" class="showcase-image">
     </section>
     <section id="how-it-works" class="reveal">
-      <h2>From Documents to Declaration in 3 Simple Steps.</h2>
+      <h2 data-key="how_it_works_title">From Documents to Declaration in 3 Simple Steps.</h2>
       <div class="step-row">
         <div class="step-text">
-          <h3>1. Upload Your Docs</h3>
-          <p>Securely upload your technical specifications, user manuals, and security whitepapers. Our AI immediately validates them for completeness, ensuring you have the right foundation for your analysis.</p>
+          <h3 data-key="step1_title">1. Upload Your Docs</h3>
+          <p data-key="step1_p">Securely upload your technical specifications, user manuals, and security whitepapers. Our AI immediately validates them for completeness, ensuring you have the right foundation for your analysis.</p>
         </div>
         <div class="step-image-container">
           <img src="assets/images/screenshot_doc_validation.png" alt="Screenshot of document validation screen" class="showcase-image">
@@ -51,8 +56,8 @@
       </div>
       <div class="step-row reverse">
         <div class="step-text">
-          <h3>2. AI Analyzes & Maps Evidence</h3>
-          <p>Our AI reads the documents and provides evidence-based justifications for each compliance requirement, showing you the exact source text. This drastically reduces manual effort and the risk of human error.</p>
+          <h3 data-key="step2_title">2. AI Analyzes & Maps Evidence</h3>
+          <p data-key="step2_p">Our AI reads the documents and provides evidence-based justifications for each compliance requirement, showing you the exact source text. This drastically reduces manual effort and the risk of human error.</p>
         </div>
         <div class="step-image-container">
           <img src="assets/images/screenshot_cvr_autofill.png" alt="Screenshot of AI-powered CVR autofill" class="showcase-image">
@@ -60,8 +65,8 @@
       </div>
       <div class="step-row">
         <div class="step-text">
-          <h3>3. Generate Professional Reports</h3>
-          <p>Instantly generate a comprehensive, professional compliance report ready for submission. The report clearly outlines the compliance status, evidence, and justifications for every single requirement.</p>
+          <h3 data-key="step3_title">3. Generate Professional Reports</h3>
+          <p data-key="step3_p">Instantly generate a comprehensive, professional compliance report ready for submission. The report clearly outlines the compliance status, evidence, and justifications for every single requirement.</p>
         </div>
         <div class="step-image-container">
           <img src="assets/images/screenshot_pdf_report.png" alt="Screenshot of a generated PDF compliance report" class="showcase-image">
@@ -69,26 +74,26 @@
       </div>
     </section>
     <section id="why-red-cat" class="reveal">
-      <h2>A Tool Designed For Your Role.</h2>
+      <h2 data-key="why_red_cat_title">A Tool Designed For Your Role.</h2>
       <div class="personas">
         <div class="persona">
-          <h3>For the Compliance Manager</h3>
-          <p>Finally, a clear and structured way to manage compliance. Reduce risk, ensure consistency, and get a real-time overview of your product's status without chasing down engineers.</p>
+          <h3 data-key="persona1_title">For the Compliance Manager</h3>
+          <p data-key="persona1_p">Finally, a clear and structured way to manage compliance. Reduce risk, ensure consistency, and get a real-time overview of your product's status without chasing down engineers.</p>
         </div>
         <div class="persona">
-          <h3>For the Technical Lead</h3>
-          <p>Translate abstract legal rules into actionable engineering tasks. Red Cat focuses on your documentation, integrating seamlessly into your workflow without scanning your code.</p>
+          <h3 data-key="persona2_title">For the Technical Lead</h3>
+          <p data-key="persona2_p">Translate abstract legal rules into actionable engineering tasks. Red Cat focuses on your documentation, integrating seamlessly into your workflow without scanning your code.</p>
         </div>
       </div>
     </section>
     <section id="cta">
-      <h2>Ready to Take Control of Your Compliance?</h2>
-      <a href="#" class="cta-button">Request Your Personalized Demo</a>
-      <a href="#" class="secondary-button">Download a Sample Report</a>
+      <h2 data-key="cta_title">Ready to Take Control of Your Compliance?</h2>
+      <a href="#" class="cta-button" data-key="cta_button">Request Your Personalized Demo</a>
+      <a href="#" class="secondary-button" data-key="cta_secondary_button">Download a Sample Report</a>
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Red Cat Inc. All rights reserved.</p>
+    <p data-key="footer_p">&copy; 2025 Red Cat Inc. All rights reserved.</p>
   </footer>
 
   <!-- Lightbox Modal -->
@@ -145,5 +150,6 @@
       revealElements.forEach(el => observer.observe(el));
     });
   </script>
+  <script src="assets/i18n.js"></script>
 </body>
 </html>
